@@ -1,0 +1,18 @@
+#include<stdio.h>
+void loveyou(int n)
+{
+	int i = 0;
+
+	while (i < n)
+	{
+		i++;
+		printf("I Love You %d\n", i);
+		
+	}
+	printf("I Love You More Than %d\n", n);
+	return 0;
+}
+int main()
+{
+	  loveyou(3000);
+}
