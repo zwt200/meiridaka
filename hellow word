@@ -1,0 +1,9 @@
+#include <stdio.h>//头文件
+
+int main()
+{
+	printf("hellow word");
+
+	return 0;//返回值
+
+}
