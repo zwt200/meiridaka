@@ -1,0 +1,15 @@
+#include<stdio.h>
+void test(int & i)
+{
+	i = 1024;
+	printf("打印i=%d\n", i);
+
+}
+
+int main()
+{
+	int i = 1;
+	printf("修改前的i=%d\n", i);
+	test(i);
+	printf("修改后的i=%d\n", i);
+}
