@@ -1,0 +1,18 @@
+#include<stdlib.h>
+#define InitSize 10
+typedef struct
+{
+	int* data;
+	int MaxSize;
+	int length;
+}seqlist;
+
+int main()
+{
+	seqlist l;
+	InitSize(l);
+	int i;
+	IncreaseSize(l, 5);
+	return 0;
+
+}
