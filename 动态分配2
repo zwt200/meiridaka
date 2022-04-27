@@ -1,0 +1,36 @@
+#include<stdlib.h>
+#define InitSize 10
+typedef struct
+{
+	int* data;
+	int MaxSize;
+	int length;
+}seqlist;
+
+void  InitList (seqlist& l)
+{
+	l.data = (int*)malloc(InitSize * sizeof(int));
+	l.length = 0;
+	l.MaxSize = InitSize;
+}
+
+void IncreaseSize(seqlist& l, int len)
+{
+	int* p = l.data;
+	l.data = (int*)malloc((l.MaxSize+len) * sizeof(int));
+	for (int i = 0; i < l.length; i++)
+	{
+		l. data[i] = p[i];
+	}
+	l.MaxSize = l.MaxSize + len;
+	free(p);
+}
+int main()
+{
+	seqlist l;
+	InitList(l);
+	int i;
+	IncreaseSize(l, 5);
+	return 0;
+
+}
