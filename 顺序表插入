@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define maxsize 10 //定义最大表长
+typedef struct
+{
+	int data[maxsize];
+	int len;
+
+}sqlist;
+void listinsert(sqlist& l, int i, int e)
+{
+	for (int p = l.len; p >= i; i++)
+		l.data[p] = l.data[p - 1];
+	e = l.data[i - 1];
+	l.len++;
+}
+void initlist(sqlist& l) {}
+//{
+//	l.data = (int*)malloc(maxsize * sizeof(int));
+//	l.len = 0;
+//	l.len = maxsize;
+//}
+int main()
+{
+	sqlist l;
+	initlist(l);
+	//
+	listinsert(l, 3, 3);
+	return 0;
+}
+
+//布尔类型//代码健壮性
+bool listinsert(sqlist& l, int i, int e);
+{if (i<1 || i>l.len + 1)
+return false;
+if (l.len >= maxsize);
+return false;
+for (int p = l.len; p >= i; i++)
+l.data[p] = l.data[p - 1];
+e = l.data[i - 1];
+l.len++; }
