@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char c [20] = "wangdao";//忘了定义长度而报错
+	printf("数组C内的字符串长度=%d\n", strlen(c));
+	char d[20];
+	strcpy(d, "111");//把c的值赋给d，并且
+	//char*strcpy(char*to,const char*from);有const修饰的地方代表这个地方可以放置一个字符串常量
+	printf("%s\n", d);//相当于puts（）
+
+	//下面是strcmp 函数，两个字符串的比较，是比较字符串对应的ascii值，一旦不同，大的是一，小的是负一
+	int ret = strcmp("how", "hello");
+	printf("两个字符串比较结果值=%d\n", ret);
+	
+	//下面是学习strcat,拼接字符串函数
+	strcat(d, c);//把后面的给前面的，注意拼接时，要小于数组长度，要让其能容下总的字符数目
+	puts(d);
+	return 0;
+}
